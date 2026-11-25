@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090A14" />
+    <title>Sign in — One2free</title>
+    <meta
+      name="description"
+      content="Sign in to your One2free account and pick up right where you left off."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#090A14",
+              ember: "#DF6B33",
+              "ember-light": "#F1844D",
+              panel: "#11121F",
+              line: "#292A39",
+              muted: "#9293A5",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      h1,
+      h2,
+      .font-display {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .ambient-glow {
+        background:
+          radial-gradient(ellipse at 18% 15%, rgba(223, 107, 51, 0.13), transparent 38%),
+          radial-gradient(ellipse at 82% 86%, rgba(95, 75, 181, 0.12), transparent 34%);
+      }
+
+      .grid-texture {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 90%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-ink text-white antialiased selection:bg-ember/30">
+    <main class="ambient-glow relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-10 sm:px-8">
+      <div aria-hidden="true" class="grid-texture pointer-events-none absolute inset-0"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -left-32 top-1/4 h-72 w-72 rounded-full border border-white/[0.04] sm:h-96 sm:w-96"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -left-20 top-[29%] h-52 w-52 rounded-full border border-white/[0.04] sm:h-72 sm:w-72"></div>
+
+      <div class="relative z-10 grid w-full max-w-5xl overflow-hidden rounded-3xl border border-white/[0.08] bg-panel/90 shadow-2xl shadow-black/40 backdrop-blur-xl lg:grid-cols-[0.92fr_1.08fr]">
+        <section class="relative hidden min-h-[680px] flex-col justify-between overflow-hidden bg-[#15131D] p-10 lg:flex xl:p-12">
+          <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_22%_32%,rgba(223,107,51,0.2),transparent_38%),linear-gradient(145deg,rgba(255,255,255,0.025),transparent_55%)]"></div>
+          <div aria-hidden="true" class="absolute -bottom-28 -right-20 h-80 w-80 rounded-full border border-ember/15"></div>
+          <div aria-hidden="true" class="absolute -bottom-16 -right-8 h-56 w-56 rounded-full border border-ember/15"></div>
+
+          <a href="#" class="relative flex w-fit items-center" aria-label="One2free home">
+            <span class="font-display text-2xl font-bold tracking-tight">One2free</span>
+          </a>
+
+          <div class="relative max-w-sm">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-ember-light">
+              <i data-lucide="sparkles" class="h-6 w-6"></i>
+            </div>
+            <h1 class="font-display text-4xl font-bold leading-[1.18] tracking-tight xl:text-[2.7rem]">
+              Make room for<br />
+              <span class="text-ember-light">what’s next.</span>
+            </h1>
+            <p class="mt-5 max-w-xs text-sm leading-7 text-slate-400">
+              Your ideas, projects, and people — all in one place. Welcome back to your space.
+            </p>
+          </div>
+
+          <div class="relative flex items-center gap-3 text-xs text-slate-500">
+            <span class="flex -space-x-2">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-violet-400 text-[10px] font-semibold text-[#171323]">A</span>
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-sky-300 text-[10px] font-semibold text-[#101922]">M</span>
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-amber-300 text-[10px] font-semibold text-[#21190B]">J</span>
+            </span>
+            <span>Join 12,000+ curious minds</span>
+          </div>
+        </section>
+
+        <section class="flex items-center justify-center px-6 py-10 sm:px-12 sm:py-14 lg:px-12 xl:px-16">
+          <div class="w-full max-w-[390px]">
+            <a href="#" class="mb-10 flex w-fit items-center lg:hidden" aria-label="One2free home">
+              <span class="font-display text-xl font-bold tracking-tight">One2free</span>
+            </a>
+
+            <div class="mb-8">
+              <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-ember-light">Welcome back</p>
+              <h2 class="font-display text-3xl font-bold tracking-tight sm:text-[2rem]">Sign in to One2free</h2>
+              <p class="mt-2 text-sm leading-6 text-muted">Enter your details to access your account.</p>
+            </div>
+
+            <form action="#" method="post" class="space-y-5">
+              <div>
+                <label for="email" class="mb-2 block text-sm font-medium text-slate-200">Email address</label>
+                <div class="group relative">
+                  <i data-lucide="mail" class="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    required
+                    class="h-12 w-full rounded-xl border border-line bg-[#0C0D17] pl-11 pr-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2 flex items-center justify-between gap-3">
+                  <label for="password" class="block text-sm font-medium text-slate-200">Password</label>
+                  <a href="#" class="text-xs font-medium text-ember-light transition hover:text-orange-300">Forgot password?</a>
+                </div>
+                <div class="group relative">
+                  <i data-lucide="lock-keyhole" class="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    placeholder="Enter your password"
+                    required
+                    class="h-12 w-full rounded-xl border border-line bg-[#0C0D17] pl-11 pr-12 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                  />
+                  <button
+                    id="toggle-password"
+                    type="button"
+                    class="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/5 hover:text-slate-200"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    <i data-lucide="eye" class="h-[18px] w-[18px]"></i>
+                  </button>
+                </div>
+              </div>
+
+              <label class="flex w-fit cursor-pointer items-center gap-2.5 text-sm text-slate-400">
+                <input
+                  type="checkbox"
+                  name="remember"
+                  class="h-4 w-4 cursor-pointer rounded border-line bg-[#0C0D17] accent-ember focus:ring-ember focus:ring-offset-ink"
+                />
+                <span>Remember me</span>
+              </label>
+
+              <button
+                type="submit"
+                class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-ember px-4 text-sm font-semibold text-white shadow-lg shadow-ember/15 transition hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25 active:scale-[0.99]"
+              >
+                Sign in
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </form>
+
+            <div class="my-7 flex items-center gap-4">
+              <span class="h-px flex-1 bg-line"></span>
+              <span class="text-xs text-slate-500">Or continue with</span>
+              <span class="h-px flex-1 bg-line"></span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <button type="button" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-line bg-white/[0.02] text-sm font-medium text-slate-300 transition hover:border-slate-500 hover:bg-white/[0.05] focus:outline-none focus:ring-2 focus:ring-ember/30" aria-label="Sign in with Google">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-[17px] w-[17px]">
+                  <path fill="#EA4335" d="M12 10.2v3.9h5.4c-.2 1.3-1.6 3.8-5.4 3.8a5.9 5.9 0 1 1 0-11.8c2.2 0 3.6.9 4.4 1.7l3-2.9C17.5 2.8 15 1.7 12 1.7a10.3 10.3 0 1 0 0 20.6c5.9 0 9.8-4.1 9.8-9.9 0-.7-.1-1.4-.2-2.2H12Z"/>
+                  <path fill="#34A853" d="M2.9 7.7 6.1 10a5.9 5.9 0 0 1 9.9-2.2l3-2.9A10.3 10.3 0 0 0 2.9 7.7Z"/>
+                  <path fill="#FBBC05" d="M12 22.3c2.8 0 5.2-.9 6.9-2.5l-3.4-2.8c-.9.6-2 1-3.5 1a5.9 5.9 0 0 1-5.6-4l-3.3 2.5A10.3 10.3 0 0 0 12 22.3Z"/>
+                  <path fill="#4285F4" d="M21.8 10.2H12v3.9h5.4a4.8 4.8 0 0 1-1.9 2.9l3.4 2.8c2-1.8 3.1-4.5 3.1-7.6 0-.7-.1-1.4-.2-2Z"/>
+                </svg>
+                <span class="hidden sm:inline">Google</span>
+              </button>
+              <button type="button" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-line bg-white/[0.02] text-sm font-medium text-slate-300 transition hover:border-slate-500 hover:bg-white/[0.05] focus:outline-none focus:ring-2 focus:ring-ember/30" aria-label="Sign in with GitHub">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-[17px] w-[17px] fill-current">
+                  <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.61 5.23-5.1 5.5.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+                </svg>
+                <span class="hidden sm:inline">GitHub</span>
+              </button>
+              <button type="button" class="flex h-11 items-center justify-center gap-2 rounded-xl border border-line bg-white/[0.02] text-sm font-medium text-slate-300 transition hover:border-slate-500 hover:bg-white/[0.05] focus:outline-none focus:ring-2 focus:ring-ember/30" aria-label="Sign in with Facebook">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-[17px] w-[17px] fill-current">
+                  <path d="M13.5 21.8v-8.94h3l.45-3.49H13.5V7.14c0-1.01.28-1.7 1.73-1.7h1.85V2.32A24.5 24.5 0 0 0 14.39 2c-2.67 0-4.5 1.63-4.5 4.63v2.74H6.87v3.49h3.02v8.94h3.61Z"/>
+                </svg>
+                <span class="hidden sm:inline">Facebook</span>
+              </button>
+            </div>
+
+            <p class="mt-8 text-center text-sm text-slate-500">
+              Don’t have an account?
+              <a href="register.html" class="ml-1 font-semibold text-ember-light transition hover:text-orange-300">Please sign up</a>
+            </p>
+
+            <p class="mt-8 text-center text-[11px] leading-5 text-slate-600">
+              By signing in, you agree to our
+              <a href="#" class="text-slate-400 transition hover:text-white">Terms of Service</a>
+              and
+              <a href="#" class="text-slate-400 transition hover:text-white">Privacy Policy</a>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("toggle-password");
+
+      togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        togglePassword.setAttribute("aria-label", isPassword ? "Hide password" : "Show password");
+        togglePassword.setAttribute("aria-pressed", String(isPassword));
+        togglePassword.innerHTML = `<i data-lucide="${isPassword ? "eye-off" : "eye"}" class="h-[18px] w-[18px]"></i>`;
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

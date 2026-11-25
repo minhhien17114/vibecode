@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090A14" />
+    <title>Analytics overview — One2free</title>
+    <meta
+      name="description"
+      content="Explore One2free ecommerce sales, business results, and marketing performance."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#090A14",
+              ember: "#DF6B33",
+              "ember-light": "#F1844D",
+              panel: "#11121F",
+              line: "#292A39",
+              muted: "#9293A5",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-display {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .ambient-glow {
+        background:
+          radial-gradient(ellipse at 18% 0%, rgba(223, 107, 51, 0.09), transparent 34%),
+          radial-gradient(ellipse at 92% 38%, rgba(95, 75, 181, 0.07), transparent 30%);
+      }
+
+      .grid-texture {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 72%);
+      }
+
+      .chart-wrap {
+        position: relative;
+        height: 280px;
+      }
+
+      @media (max-width: 640px) {
+        .chart-wrap {
+          height: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body class="ambient-glow min-h-screen bg-ink text-white antialiased selection:bg-ember/30">
+    <div aria-hidden="true" class="grid-texture pointer-events-none fixed inset-0"></div>
+    <div class="relative min-h-screen lg:flex">
+      <aside class="hidden w-[248px] shrink-0 border-r border-white/[0.07] bg-[#0C0D17]/80 px-5 py-7 lg:flex lg:flex-col">
+        <a href="login.html" class="mb-10 flex w-fit items-center gap-3" aria-label="One2free home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-ember text-white">
+            <i data-lucide="layers-3" class="h-5 w-5" aria-hidden="true"></i>
+          </span>
+          <span class="font-display text-xl font-bold tracking-tight">One2free</span>
+        </a>
+
+        <p class="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">Workspace</p>
+        <nav aria-label="Main navigation" class="space-y-1">
+          <a href="charts.html" aria-current="page" class="flex h-11 items-center gap-3 rounded-xl border border-ember/15 bg-ember/10 px-3 text-sm font-medium text-ember-light">
+            <i data-lucide="chart-no-axes-combined" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+            Analytics
+          </a>
+          <a href="charts.html#sales" class="flex h-11 items-center gap-3 rounded-xl px-3 text-sm text-slate-400 transition hover:bg-white/[0.04] hover:text-white">
+            <i data-lucide="shopping-bag" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+            Sales
+          </a>
+          <a href="charts.html#marketing" class="flex h-11 items-center gap-3 rounded-xl px-3 text-sm text-slate-400 transition hover:bg-white/[0.04] hover:text-white">
+            <i data-lucide="megaphone" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+            Marketing
+          </a>
+        </nav>
+
+        <div class="mt-auto rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+          <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
+            <i data-lucide="sparkles" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+          </div>
+          <p class="text-sm font-semibold text-slate-200">Your business, at a glance</p>
+          <p class="mt-1 text-xs leading-5 text-slate-500">A demo overview powered by sample store data.</p>
+        </div>
+      </aside>
+
+      <main class="relative z-10 min-w-0 flex-1">
+        <header class="sticky top-0 z-20 border-b border-white/[0.07] bg-[#090A14]/85 px-4 backdrop-blur-xl sm:px-7 lg:px-10">
+          <div class="mx-auto flex h-[68px] max-w-[1500px] items-center justify-between gap-4">
+            <a href="login.html" class="flex items-center gap-2.5 lg:hidden" aria-label="One2free home">
+              <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-ember text-white">
+                <i data-lucide="layers-3" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+              </span>
+              <span class="font-display text-lg font-bold tracking-tight">One2free</span>
+            </a>
+            <div class="hidden items-center gap-2 text-sm text-slate-500 lg:flex">
+              <span>Workspace</span>
+              <i data-lucide="chevron-right" class="h-4 w-4" aria-hidden="true"></i>
+              <span class="font-medium text-slate-200">Analytics</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="hidden items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/[0.06] px-3 py-1.5 text-xs font-medium text-emerald-300 sm:flex">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Demo data
+              </span>
+              <button type="button" aria-label="Notifications" class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] text-slate-400 transition hover:bg-white/[0.06] hover:text-white focus:outline-none focus:ring-2 focus:ring-ember/40">
+                <i data-lucide="bell" class="h-[18px] w-[18px]" aria-hidden="true"></i>
+              </button>
+              <button type="button" aria-label="Account menu" class="flex h-9 w-9 items-center justify-center rounded-full border border-ember/20 bg-ember/15 text-xs font-semibold text-ember-light focus:outline-none focus:ring-2 focus:ring-ember/40">
+                AM
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="mx-auto max-w-[1500px] px-4 pb-10 pt-7 sm:px-7 sm:pt-9 lg:px-10 lg:pt-10">
+          <section class="mb-7 flex flex-col justify-between gap-5 sm:mb-8 sm:flex-row sm:items-end">
+            <div>
+              <p class="mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-ember-light">Store performance</p>
+              <h1 class="font-display text-[27px] font-bold tracking-tight sm:text-3xl">Analytics overview</h1>
+              <p class="mt-2 text-sm text-slate-400">Track sales, business health, and marketing performance.</p>
+            </div>
+            <div class="flex items-center gap-2 self-start sm:self-auto">
+              <label for="date-range" class="sr-only">Select sales chart range</label>
+              <div class="relative">
+                <i data-lucide="calendar-days" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" aria-hidden="true"></i>
+                <select id="date-range" class="h-10 appearance-none rounded-xl border border-line bg-panel pl-9 pr-9 text-xs font-medium text-slate-200 outline-none transition hover:border-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10">
+                  <option value="12">Last 12 months</option>
+                  <option value="6">Last 6 months</option>
+                  <option value="3">Last 3 months</option>
+                </select>
+                <i data-lucide="chevron-down" class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" aria-hidden="true"></i>
+              </div>
+              <button id="export-report" type="button" class="flex h-10 items-center gap-2 rounded-xl bg-ember px-3.5 text-xs font-semibold text-white shadow-lg shadow-ember/10 transition hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25">
+                <i data-lucide="download" class="h-4 w-4" aria-hidden="true"></i>
+                <span class="hidden sm:inline">Export report</span>
+                <span class="sm:hidden">Export</span>
+              </button>
+            </div>
+          </section>
+
+          <section aria-label="Key performance indicators" class="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="rounded-2xl border border-white/[0.07] bg-panel/90 p-5 shadow-lg shadow-black/10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-medium text-slate-400">Total revenue</p>
+                  <p class="mt-3 font-display text-[25px] font-bold tracking-tight">$308,500</p>
+                </div>
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-ember/10 text-ember-light">
+                  <i data-lucide="wallet" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs">
+                <span class="flex items-center gap-1 font-semibold text-emerald-400"><i data-lucide="trending-up" class="h-3.5 w-3.5" aria-hidden="true"></i>12.8%</span>
+                <span class="text-slate-500">vs. previous period</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/[0.07] bg-panel/90 p-5 shadow-lg shadow-black/10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-medium text-slate-400">Net profit</p>
+                  <p class="mt-3 font-display text-[25px] font-bold tracking-tight">$67,300</p>
+                </div>
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                  <i data-lucide="circle-dollar-sign" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs">
+                <span class="flex items-center gap-1 font-semibold text-emerald-400"><i data-lucide="trending-up" class="h-3.5 w-3.5" aria-hidden="true"></i>8.3%</span>
+                <span class="text-slate-500">vs. previous period</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/[0.07] bg-panel/90 p-5 shadow-lg shadow-black/10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-medium text-slate-400">Orders</p>
+                  <p class="mt-3 font-display text-[25px] font-bold tracking-tight">3,842</p>
+                </div>
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300">
+                  <i data-lucide="package-check" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs">
+                <span class="flex items-center gap-1 font-semibold text-emerald-400"><i data-lucide="trending-up" class="h-3.5 w-3.5" aria-hidden="true"></i>6.1%</span>
+                <span class="text-slate-500">vs. previous period</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/[0.07] bg-panel/90 p-5 shadow-lg shadow-black/10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-medium text-slate-400">Marketing ROAS</p>
+                  <p class="mt-3 font-display text-[25px] font-bold tracking-tight">4.97<span class="ml-1 text-lg text-slate-400">x</span></p>
+                </div>
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300">
+                  <i data-lucide="target" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs">
+                <span class="flex items-center gap-1 font-semibold text-rose-300"><i data-lucide="trending-down" class="h-3.5 w-3.5" aria-hidden="true"></i>0.4%</span>
+                <span class="text-slate-500">vs. previous period</span>
+              </div>
+            </article>
+          </section>
+
+          <section id="sales" class="mb-5 grid grid-cols-1 gap-5 xl:grid-cols-[minmax(0,1.8fr)_minmax(300px,0.9fr)]">
+            <article class="min-w-0 rounded-2xl border border-white/[0.07] bg-panel/90 p-5 sm:p-6">
+              <div class="mb-5 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h2 class="font-display text-base font-semibold">Revenue &amp; profit</h2>
+                  <p class="mt-1 text-xs text-slate-500">Monthly sales performance over time</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] text-slate-400">
+                  <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-ember"></span>Revenue</span>
+                  <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-violet-400"></span>Net profit</span>
+                </div>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="revenue-chart" role="img" aria-label="Line chart showing monthly revenue and net profit"></canvas>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/[0.07] bg-panel/90 p-5 sm:p-6">
+              <div>
+                <h2 class="font-display text-base font-semibold">Marketing spend</h2>
+                <p class="mt-1 text-xs text-slate-500">Budget distribution by channel</p>
+              </div>
+              <div class="chart-wrap mt-3">
+                <canvas id="channel-chart" role="img" aria-label="Doughnut chart showing marketing spend by channel"></canvas>
+              </div>
+              <div id="channel-legend" class="mt-3 space-y-3"></div>
+            </article>
+          </section>
+
+          <section id="marketing" class="rounded-2xl border border-white/[0.07] bg-panel/90">
+            <div class="flex flex-col justify-between gap-4 border-b border-white/[0.07] px-5 py-5 sm:flex-row sm:items-center sm:px-6">
+              <div>
+                <h2 class="font-display text-base font-semibold">Campaign performance</h2>
+                <p class="mt-1 text-xs text-slate-500">A breakdown of your demo marketing campaigns</p>
+              </div>
+              <label class="relative block w-full sm:w-64">
+                <span class="sr-only">Search campaigns</span>
+                <i data-lucide="search" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" aria-hidden="true"></i>
+                <input id="campaign-search" type="search" placeholder="Search campaigns..." class="h-10 w-full rounded-xl border border-line bg-[#0C0D17] pl-9 pr-3 text-xs text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10" />
+              </label>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[760px] text-left text-xs">
+                <caption class="sr-only">Marketing campaign metrics, including spend, revenue, return on ad spend, click-through rate, and conversions.</caption>
+                <thead class="bg-white/[0.02] text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                  <tr>
+                    <th scope="col" class="px-5 py-3.5 font-semibold sm:px-6">Campaign</th>
+                    <th scope="col" class="px-4 py-3.5 font-semibold">Channel</th>
+                    <th scope="col" class="px-4 py-3.5 text-right font-semibold">Spend</th>
+                    <th scope="col" class="px-4 py-3.5 text-right font-semibold">Revenue</th>
+                    <th scope="col" class="px-4 py-3.5 text-right font-semibold">ROAS</th>
+                    <th scope="col" class="px-4 py-3.5 text-right font-semibold">CTR</th>
+                    <th scope="col" class="px-4 py-3.5 text-right font-semibold">Conversions</th>
+                    <th scope="col" class="px-5 py-3.5 text-right font-semibold sm:px-6">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="campaign-rows" class="divide-y divide-white/[0.055] text-slate-300"></tbody>
+              </table>
+            </div>
+            <p id="empty-state" class="hidden px-6 py-10 text-center text-sm text-slate-500">No campaigns match your search.</p>
+            <div class="flex flex-col gap-2 border-t border-white/[0.07] px-5 py-4 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+              <span>Showing <span id="campaign-count" class="font-medium text-slate-300">0</span> campaigns <span class="text-slate-600">· Sample data for demonstration</span></span>
+              <span>Last updated just now</span>
+            </div>
+          </section>
+
+          <footer class="mt-6 flex flex-col gap-1 text-[11px] text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+            <span>© 2026 One2free. Analytics dashboard demo.</span>
+            <span>All figures shown are illustrative mock data.</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const monthData = [
+        { label: "Jan", revenue: 16800, profit: 3650 },
+        { label: "Feb", revenue: 19200, profit: 4180 },
+        { label: "Mar", revenue: 18400, profit: 3970 },
+        { label: "Apr", revenue: 22100, profit: 4850 },
+        { label: "May", revenue: 23800, profit: 5100 },
+        { label: "Jun", revenue: 21500, profit: 4660 },
+        { label: "Jul", revenue: 26300, profit: 5820 },
+        { label: "Aug", revenue: 24900, profit: 5340 },
+        { label: "Sep", revenue: 28700, profit: 6320 },
+        { label: "Oct", revenue: 31400, profit: 6980 },
+        { label: "Nov", revenue: 35600, profit: 7820 },
+        { label: "Dec", revenue: 39800, profit: 8610 },
+      ];
+
+      const chartText = "#9293A5";
+      const chartGrid = "rgba(255,255,255,0.055)";
+      const revenueChart = new Chart(document.getElementById("revenue-chart"), {
+        type: "line",
+        data: {
+          labels: monthData.map((item) => item.label),
+          datasets: [
+            {
+              label: "Revenue",
+              data: monthData.map((item) => item.revenue),
+              borderColor: "#DF6B33",
+              backgroundColor: "rgba(223,107,51,0.12)",
+              borderWidth: 2.5,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#DF6B33",
+              fill: true,
+              tension: 0.38,
+            },
+            {
+              label: "Net profit",
+              data: monthData.map((item) => item.profit),
+              borderColor: "#A78BFA",
+              backgroundColor: "rgba(167,139,250,0.05)",
+              borderWidth: 2,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#A78BFA",
+              fill: false,
+              tension: 0.38,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#191A28",
+              borderColor: "#363747",
+              borderWidth: 1,
+              titleColor: "#fff",
+              bodyColor: "#C4C5D0",
+              padding: 12,
+              callbacks: {
+                label: (context) => `${context.dataset.label}: $${context.parsed.y.toLocaleString("en-US")}`,
+              },
+            },
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              border: { display: false },
+              ticks: { color: chartText, maxRotation: 0, font: { family: "Inter", size: 10 } },
+            },
+            y: {
+              beginAtZero: true,
+              border: { display: false, dash: [4, 4] },
+              grid: { color: chartGrid },
+              ticks: {
+                color: chartText,
+                maxTicksLimit: 5,
+                font: { family: "Inter", size: 10 },
+                callback: (value) => `$${Number(value) / 1000}k`,
+              },
+            },
+          },
+        },
+      });
+
+      const channels = [
+        { name: "Paid social", value: 10300, color: "#DF6B33" },
+        { name: "Search ads", value: 7600, color: "#A78BFA" },
+        { name: "Email", value: 2900, color: "#38BDF8" },
+        { name: "Affiliate", value: 2800, color: "#34D399" },
+      ];
+
+      new Chart(document.getElementById("channel-chart"), {
+        type: "doughnut",
+        data: {
+          labels: channels.map((channel) => channel.name),
+          datasets: [{
+            data: channels.map((channel) => channel.value),
+            backgroundColor: channels.map((channel) => channel.color),
+            borderColor: "#11121F",
+            borderWidth: 5,
+            hoverOffset: 5,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: "76%",
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "#191A28",
+              borderColor: "#363747",
+              borderWidth: 1,
+              padding: 10,
+              callbacks: {
+                label: (context) => ` $${context.parsed.toLocaleString("en-US")}`,
+              },
+            },
+          },
+        },
+        plugins: [{
+          id: "centerLabel",
+          afterDraw(chart) {
+            const { ctx, chartArea } = chart;
+            if (!chartArea) return;
+            const x = (chartArea.left + chartArea.right) / 2;
+            const y = (chartArea.top + chartArea.bottom) / 2;
+            ctx.save();
+            ctx.textAlign = "center";
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = "600 21px Inter";
+            ctx.fillText("$23.6k", x, y);
+            ctx.fillStyle = "#9293A5";
+            ctx.font = "11px Inter";
+            ctx.fillText("total spend", x, y + 19);
+            ctx.restore();
+          },
+        }],
+      });
+
+      document.getElementById("channel-legend").innerHTML = channels.map((channel) => `
+        <div class="flex items-center justify-between text-xs">
+          <span class="flex items-center gap-2.5 text-slate-400">
+            <span class="h-2 w-2 rounded-full" style="background-color:${channel.color}"></span>
+            ${channel.name}
+          </span>
+          <span class="font-medium text-slate-200">$${channel.value.toLocaleString("en-US")}</span>
+        </div>
+      `).join("");
+
+      const campaigns = [
+        { name: "Holiday Gift Guide", channel: "Paid social", spend: 6400, revenue: 29440, roas: 4.60, ctr: "2.84%", conversions: 412, status: "Active" },
+        { name: "Search — Best Sellers", channel: "Search ads", spend: 5200, revenue: 27560, roas: 5.30, ctr: "4.12%", conversions: 386, status: "Active" },
+        { name: "November Newsletter", channel: "Email", spend: 1800, revenue: 13500, roas: 7.50, ctr: "5.63%", conversions: 241, status: "Active" },
+        { name: "Creator Picks", channel: "Paid social", spend: 3900, revenue: 13260, roas: 3.40, ctr: "1.96%", conversions: 198, status: "Active" },
+        { name: "Partner Rewards", channel: "Affiliate", spend: 2800, revenue: 11480, roas: 4.10, ctr: "3.38%", conversions: 167, status: "Paused" },
+        { name: "Retargeting — Cart", channel: "Search ads", spend: 2400, revenue: 15120, roas: 6.30, ctr: "3.95%", conversions: 224, status: "Active" },
+        { name: "Early Access Launch", channel: "Email", spend: 1100, revenue: 6820, roas: 6.20, ctr: "4.87%", conversions: 119, status: "Completed" },
+      ];
+
+      const campaignRows = document.getElementById("campaign-rows");
+      const searchInput = document.getElementById("campaign-search");
+      const emptyState = document.getElementById("empty-state");
+      const campaignCount = document.getElementById("campaign-count");
+      const money = (amount) => `$${amount.toLocaleString("en-US")}`;
+
+      function renderCampaigns(query) {
+        const filtered = campaigns.filter((campaign) =>
+          `${campaign.name} ${campaign.channel} ${campaign.status}`.toLowerCase().includes(query.trim().toLowerCase()),
+        );
+        campaignRows.innerHTML = filtered.map((campaign) => `
+          <tr class="transition hover:bg-white/[0.025]">
+            <th scope="row" class="whitespace-nowrap px-5 py-4 text-left font-medium text-slate-200 sm:px-6">${campaign.name}</th>
+            <td class="whitespace-nowrap px-4 py-4 text-slate-400">${campaign.channel}</td>
+            <td class="whitespace-nowrap px-4 py-4 text-right tabular-nums">${money(campaign.spend)}</td>
+            <td class="whitespace-nowrap px-4 py-4 text-right font-medium text-slate-200 tabular-nums">${money(campaign.revenue)}</td>
+            <td class="whitespace-nowrap px-4 py-4 text-right font-medium text-emerald-300 tabular-nums">${campaign.roas.toFixed(2)}x</td>
+            <td class="whitespace-nowrap px-4 py-4 text-right tabular-nums">${campaign.ctr}</td>
+            <td class="whitespace-nowrap px-4 py-4 text-right tabular-nums">${campaign.conversions}</td>
+            <td class="whitespace-nowrap px-5 py-4 text-right sm:px-6">
+              <span class="inline-flex items-center gap-1.5 rounded-full ${campaign.status === "Active" ? "bg-emerald-400/10 text-emerald-300" : campaign.status === "Paused" ? "bg-amber-400/10 text-amber-300" : "bg-slate-400/10 text-slate-400"} px-2.5 py-1 text-[10px] font-medium">
+                <span class="h-1 w-1 rounded-full ${campaign.status === "Active" ? "bg-emerald-400" : campaign.status === "Paused" ? "bg-amber-400" : "bg-slate-400"}"></span>
+                ${campaign.status}
+              </span>
+            </td>
+          </tr>
+        `).join("");
+        campaignCount.textContent = filtered.length;
+        emptyState.classList.toggle("hidden", filtered.length !== 0);
+      }
+
+      renderCampaigns("");
+      searchInput.addEventListener("input", (event) => renderCampaigns(event.target.value));
+
+      document.getElementById("date-range").addEventListener("change", (event) => {
+        const count = Number(event.target.value);
+        const visibleMonths = monthData.slice(-count);
+        revenueChart.data.labels = visibleMonths.map((item) => item.label);
+        revenueChart.data.datasets[0].data = visibleMonths.map((item) => item.revenue);
+        revenueChart.data.datasets[1].data = visibleMonths.map((item) => item.profit);
+        revenueChart.update();
+      });
+
+      document.getElementById("export-report").addEventListener("click", () => {
+        const rows = [
+          ["Campaign", "Channel", "Spend", "Revenue", "ROAS", "CTR", "Conversions", "Status"],
+          ...campaigns.map((campaign) => [
+            campaign.name,
+            campaign.channel,
+            campaign.spend,
+            campaign.revenue,
+            campaign.roas,
+            campaign.ctr,
+            campaign.conversions,
+            campaign.status,
+          ]),
+        ];
+        const csv = rows.map((row) => row.map((value) => `"${String(value).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+        link.download = "one2free-campaign-performance.csv";
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+    </script>
+  </body>
+</html>

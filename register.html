@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090A14" />
+    <title>Create your account — One2free</title>
+    <meta
+      name="description"
+      content="Create your One2free account and make room for what’s next."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#090A14",
+              ember: "#DF6B33",
+              "ember-light": "#F1844D",
+              panel: "#11121F",
+              line: "#292A39",
+              muted: "#9293A5",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      h1,
+      h2,
+      .font-display {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .ambient-glow {
+        background:
+          radial-gradient(ellipse at 18% 15%, rgba(223, 107, 51, 0.13), transparent 38%),
+          radial-gradient(ellipse at 82% 86%, rgba(95, 75, 181, 0.12), transparent 34%);
+      }
+
+      .grid-texture {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 90%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-ink text-white antialiased selection:bg-ember/30">
+    <main class="ambient-glow relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-10 sm:px-8">
+      <div aria-hidden="true" class="grid-texture pointer-events-none absolute inset-0"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -left-32 top-1/4 h-72 w-72 rounded-full border border-white/[0.04] sm:h-96 sm:w-96"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -left-20 top-[29%] h-52 w-52 rounded-full border border-white/[0.04] sm:h-72 sm:w-72"></div>
+
+      <div class="relative z-10 grid w-full max-w-5xl overflow-hidden rounded-3xl border border-white/[0.08] bg-panel/90 shadow-2xl shadow-black/40 backdrop-blur-xl lg:grid-cols-[0.92fr_1.08fr]">
+        <section class="relative hidden min-h-[720px] flex-col justify-between overflow-hidden bg-[#15131D] p-10 lg:flex xl:p-12">
+          <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_22%_32%,rgba(223,107,51,0.2),transparent_38%),linear-gradient(145deg,rgba(255,255,255,0.025),transparent_55%)]"></div>
+          <div aria-hidden="true" class="absolute -bottom-28 -right-20 h-80 w-80 rounded-full border border-ember/15"></div>
+          <div aria-hidden="true" class="absolute -bottom-16 -right-8 h-56 w-56 rounded-full border border-ember/15"></div>
+
+          <a href="login.html" class="relative flex w-fit items-center" aria-label="One2free home">
+            <span class="font-display text-2xl font-bold tracking-tight">One2free</span>
+          </a>
+
+          <div class="relative max-w-sm">
+            <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-ember-light">
+              <i data-lucide="sparkles" class="h-6 w-6"></i>
+            </div>
+            <h1 class="font-display text-4xl font-bold leading-[1.18] tracking-tight xl:text-[2.7rem]">
+              Your next idea<br />
+              <span class="text-ember-light">starts here.</span>
+            </h1>
+            <p class="mt-5 max-w-xs text-sm leading-7 text-slate-400">
+              Create your account and bring your ideas, projects, and people together in one place.
+            </p>
+          </div>
+
+          <div class="relative flex items-center gap-3 text-xs text-slate-500">
+            <span class="flex -space-x-2">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-violet-400 text-[10px] font-semibold text-[#171323]">A</span>
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-sky-300 text-[10px] font-semibold text-[#101922]">M</span>
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-[#15131D] bg-amber-300 text-[10px] font-semibold text-[#21190B]">J</span>
+            </span>
+            <span>Join 12,000+ curious minds</span>
+          </div>
+        </section>
+
+        <section class="flex items-center justify-center px-6 py-10 sm:px-10 sm:py-12 lg:px-10 xl:px-12">
+          <div class="w-full max-w-[460px]">
+            <a href="login.html" class="mb-8 flex w-fit items-center lg:hidden" aria-label="One2free home">
+              <span class="font-display text-xl font-bold tracking-tight">One2free</span>
+            </a>
+
+            <div class="mb-7">
+              <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-ember-light">Get started</p>
+              <h2 class="font-display text-3xl font-bold tracking-tight sm:text-[2rem]">Create your account</h2>
+              <p class="mt-2 text-sm leading-6 text-muted">Join One2free and get started in just a moment.</p>
+            </div>
+
+            <form id="register-form" action="#" method="post" class="space-y-4">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="full-name" class="mb-2 block text-sm font-medium text-slate-200">Full name <span class="text-ember-light">*</span></label>
+                  <div class="group relative">
+                    <i data-lucide="user-round" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                    <input
+                      id="full-name"
+                      name="fullName"
+                      type="text"
+                      autocomplete="name"
+                      placeholder="Alex Morgan"
+                      required
+                      class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="mb-2 block text-sm font-medium text-slate-200">Email address <span class="text-ember-light">*</span></label>
+                  <div class="group relative">
+                    <i data-lucide="mail" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="you@example.com"
+                      required
+                      class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="password" class="mb-2 block text-sm font-medium text-slate-200">Password <span class="text-ember-light">*</span></label>
+                  <div class="group relative">
+                    <i data-lucide="lock-keyhole" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                    <input
+                      id="password"
+                      name="password"
+                      type="password"
+                      autocomplete="new-password"
+                      placeholder="Create a password"
+                      required
+                      data-password
+                      class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-10 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                    />
+                    <button
+                      type="button"
+                      data-toggle-password="password"
+                      class="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/5 hover:text-slate-200"
+                      aria-label="Show password"
+                      aria-pressed="false"
+                    >
+                      <i data-lucide="eye" class="h-[17px] w-[17px]"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="confirm-password" class="mb-2 block text-sm font-medium text-slate-200">Confirm password <span class="text-ember-light">*</span></label>
+                  <div class="group relative">
+                    <i data-lucide="lock-keyhole" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                    <input
+                      id="confirm-password"
+                      name="confirmPassword"
+                      type="password"
+                      autocomplete="new-password"
+                      placeholder="Re-enter password"
+                      required
+                      data-confirm-password
+                      class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-10 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                    />
+                    <button
+                      type="button"
+                      data-toggle-password="confirm-password"
+                      class="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-slate-500 transition hover:bg-white/5 hover:text-slate-200"
+                      aria-label="Show confirmed password"
+                      aria-pressed="false"
+                    >
+                      <i data-lucide="eye" class="h-[17px] w-[17px]"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="gender" class="mb-2 block text-sm font-medium text-slate-200">Gender <span class="text-xs font-normal text-slate-500">(optional)</span></label>
+                  <select
+                    id="gender"
+                    name="gender"
+                    class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] px-3 text-sm text-slate-300 outline-none transition focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                  >
+                    <option value="" selected>Select gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="phone" class="mb-2 block text-sm font-medium text-slate-200">Phone number <span class="text-xs font-normal text-slate-500">(optional)</span></label>
+                  <div class="group relative">
+                    <i data-lucide="phone" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      inputmode="numeric"
+                      pattern="[0-9]{10}"
+                      maxlength="10"
+                      title="Enter exactly 10 digits."
+                      placeholder="10-digit number"
+                      class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="address" class="mb-2 block text-sm font-medium text-slate-200">Address <span class="text-xs font-normal text-slate-500">(optional)</span></label>
+                <div class="group relative">
+                  <i data-lucide="map-pin" class="pointer-events-none absolute left-3.5 top-1/2 h-[17px] w-[17px] -translate-y-1/2 text-slate-500 transition-colors group-focus-within:text-ember-light"></i>
+                  <input
+                    id="address"
+                    name="address"
+                    type="text"
+                    autocomplete="street-address"
+                    placeholder="Street address, city"
+                    class="h-11 w-full rounded-xl border border-line bg-[#0C0D17] pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-ember/70 focus:ring-4 focus:ring-ember/10"
+                  />
+                </div>
+              </div>
+
+              <label class="flex cursor-pointer items-start gap-2.5 pt-1 text-sm leading-5 text-slate-400">
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  required
+                  class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-line bg-[#0C0D17] accent-ember focus:ring-ember focus:ring-offset-ink"
+                />
+                <span>
+                  I agree to the
+                  <a href="#" class="font-medium text-ember-light transition hover:text-orange-300">Terms of Service</a>
+                  and
+                  <a href="#" class="font-medium text-ember-light transition hover:text-orange-300">Privacy Policy</a>.
+                </span>
+              </label>
+
+              <button
+                type="submit"
+                class="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-ember px-4 text-sm font-semibold text-white shadow-lg shadow-ember/15 transition hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25 active:scale-[0.99]"
+              >
+                Create account
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </form>
+
+            <p class="mt-6 text-center text-sm text-slate-500">
+              Already have an account?
+              <a href="login.html" class="ml-1 font-semibold text-ember-light transition hover:text-orange-300">Sign in</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirm-password");
+      const registerForm = document.getElementById("register-form");
+
+      function validatePasswordMatch() {
+        confirmPasswordInput.setCustomValidity(
+          confirmPasswordInput.value && confirmPasswordInput.value !== passwordInput.value
+            ? "Passwords do not match."
+            : "",
+        );
+      }
+
+      passwordInput.addEventListener("input", validatePasswordMatch);
+      confirmPasswordInput.addEventListener("input", validatePasswordMatch);
+      registerForm.addEventListener("submit", validatePasswordMatch);
+
+      document.querySelectorAll("[data-toggle-password]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const input = document.getElementById(button.dataset.togglePassword);
+          const isPassword = input.type === "password";
+          input.type = isPassword ? "text" : "password";
+          button.setAttribute(
+            "aria-label",
+            isPassword ? "Hide password" : button.dataset.togglePassword === "password"
+              ? "Show password"
+              : "Show confirmed password",
+          );
+          button.setAttribute("aria-pressed", String(isPassword));
+          button.innerHTML = `<i data-lucide="${isPassword ? "eye-off" : "eye"}" class="h-[17px] w-[17px]"></i>`;
+          lucide.createIcons();
+        });
+      });
+    </script>
+  </body>
+</html>
