@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090A14" />
+    <title>One2free — Kế toán rõ ràng, kinh doanh vững vàng</title>
+    <meta
+      name="description"
+      content="One2free đồng hành cùng doanh nghiệp với dịch vụ kế toán, báo cáo tài chính và tư vấn thuế minh bạch, dễ hiểu."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#090A14",
+              ember: "#DF6B33",
+              "ember-light": "#F1844D",
+              panel: "#11121F",
+              line: "#292A39",
+              muted: "#9293A5",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: clip;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        overflow-x: clip;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-display {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .ambient-glow {
+        background:
+          radial-gradient(ellipse at 12% 8%, rgba(223, 107, 51, 0.13), transparent 34%),
+          radial-gradient(ellipse at 90% 34%, rgba(95, 75, 181, 0.1), transparent 32%);
+      }
+
+      .grid-texture {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, black, transparent 88%);
+      }
+
+      .accounting-orbit {
+        animation: orbit 26s linear infinite;
+        transform-origin: center;
+      }
+
+      .float-gently {
+        animation: float-gently 5s ease-in-out infinite;
+      }
+
+      .scroll-reveal {
+        --animate-duration: 1.1s;
+      }
+
+      body.motion-ready .scroll-reveal:not(.is-revealed) {
+        opacity: 0;
+      }
+
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes float-gently {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-9px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="ambient-glow min-h-screen bg-ink text-white antialiased selection:bg-ember/30">
+    <div aria-hidden="true" class="grid-texture pointer-events-none fixed inset-0"></div>
+    <header class="relative z-20 border-b border-white/[0.07] bg-ink/75 backdrop-blur-xl">
+      <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:px-8">
+        <a href="index.html" class="flex shrink-0 items-center gap-2.5" aria-label="One2free - Trang chủ">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-ember text-white shadow-lg shadow-ember/20">
+            <i data-lucide="layers-3" class="h-[19px] w-[19px]" aria-hidden="true"></i>
+          </span>
+          <span class="font-display text-xl font-bold tracking-tight">One2free</span>
+        </a>
+
+        <nav aria-label="Điều hướng chính" class="hidden items-center gap-8 text-sm text-slate-400 md:flex">
+          <a href="#dich-vu" class="transition hover:text-white">Dịch vụ</a>
+          <a href="#ve-chung-toi" class="transition hover:text-white">Về One2free</a>
+          <a href="#quy-trinh" class="transition hover:text-white">Quy trình</a>
+        </nav>
+
+        <a
+          href="#dich-vu"
+          class="inline-flex h-10 shrink-0 items-center gap-2 rounded-xl bg-ember px-3.5 text-xs font-semibold text-white shadow-lg shadow-ember/15 transition hover:-translate-y-0.5 hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25 sm:px-4 sm:text-sm"
+        >
+          <span class="hidden sm:inline">Tìm giải pháp phù hợp</span>
+          <span class="sm:hidden">Dịch vụ</span>
+          <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="relative z-10">
+      <section class="mx-auto grid grid-cols-1 min-h-[650px] max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[1.03fr_0.97fr] lg:gap-8 lg:py-28">
+        <div class="relative z-10">
+          <div class="animate__animated animate__fadeInDown mb-6 inline-flex items-center gap-2 rounded-full border border-ember/20 bg-ember/[0.07] px-3.5 py-2 text-xs font-medium text-ember-light">
+            <i data-lucide="sparkles" class="h-4 w-4" aria-hidden="true"></i>
+            Kế toán đồng hành cùng doanh nghiệp
+          </div>
+          <h1 class="animate__animated animate__fadeInUp animate__delay-1s max-w-2xl font-display text-[2.7rem] font-bold leading-[1.12] tracking-tight sm:text-6xl lg:text-[4.15rem]">
+            Rõ từng con số.<br />
+            <span class="bg-gradient-to-r from-ember-light via-orange-300 to-amber-200 bg-clip-text text-transparent">Vững mỗi quyết định.</span>
+          </h1>
+          <p class="animate__animated animate__fadeInUp mt-6 max-w-xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">
+            One2free giúp doanh nghiệp quản lý sổ sách, nắm bắt tình hình tài chính và chủ động với nghĩa vụ thuế — để bạn tập trung phát triển kinh doanh.
+          </p>
+          <div class="animate__animated animate__fadeInUp mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#dich-vu" class="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-ember px-5 text-sm font-semibold text-white shadow-xl shadow-ember/20 transition hover:-translate-y-0.5 hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25">
+              Khám phá dịch vụ
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+            </a>
+            <a href="#quy-trinh" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-5 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/[0.06] focus:outline-none focus:ring-4 focus:ring-white/10">
+              Cách chúng tôi làm việc
+              <i data-lucide="play" class="h-4 w-4 text-ember-light" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="animate__animated animate__fadeInUp mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
+            <span class="inline-flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-emerald-400" aria-hidden="true"></i>Thông tin dễ theo dõi</span>
+            <span class="inline-flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-emerald-400" aria-hidden="true"></i>Quy trình minh bạch</span>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeInRight relative mx-auto w-full max-w-[540px]">
+          <div aria-hidden="true" class="absolute -inset-8 rounded-full bg-ember/[0.08] blur-3xl"></div>
+          <div aria-hidden="true" class="accounting-orbit absolute inset-3 hidden rounded-full border border-dashed border-white/[0.12] sm:block"></div>
+          <div aria-hidden="true" class="absolute -right-2 top-[18%] h-3 w-3 rounded-full bg-ember shadow-[0_0_24px_rgba(223,107,51,0.8)]"></div>
+          <div aria-hidden="true" class="absolute -bottom-1 left-[18%] h-2.5 w-2.5 rounded-full bg-violet-300 shadow-[0_0_20px_rgba(196,181,253,0.8)]"></div>
+
+          <div class="relative rounded-[28px] border border-white/[0.1] bg-[#11121F]/95 p-5 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-7">
+            <div class="mb-7 flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-medium text-slate-500">TỔNG QUAN TÀI CHÍNH</p>
+                <p class="mt-1 font-display text-lg font-semibold">Bức tranh rõ ràng</p>
+              </div>
+              <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-ember/15 bg-ember/10 text-ember-light">
+                <i data-lucide="chart-no-axes-combined" class="h-5 w-5" aria-hidden="true"></i>
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+                <div class="flex items-center gap-2 text-xs text-slate-400">
+                  <span class="h-2 w-2 rounded-full bg-ember"></span>Doanh thu
+                </div>
+                <div class="mt-5 flex h-16 items-end gap-1.5" aria-hidden="true">
+                  <span class="h-[38%] flex-1 rounded-t bg-ember/25"></span>
+                  <span class="h-[55%] flex-1 rounded-t bg-ember/35"></span>
+                  <span class="h-[46%] flex-1 rounded-t bg-ember/40"></span>
+                  <span class="h-[70%] flex-1 rounded-t bg-ember/55"></span>
+                  <span class="h-[63%] flex-1 rounded-t bg-ember/65"></span>
+                  <span class="h-[88%] flex-1 rounded-t bg-gradient-to-t from-ember to-amber-300"></span>
+                </div>
+                <div class="mt-2 flex justify-between text-[9px] text-slate-600"><span>T.1</span><span>T.2</span><span>T.3</span><span>T.4</span><span>T.5</span><span>T.6</span></div>
+              </div>
+
+              <div class="flex flex-col justify-between rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+                <div class="flex items-center gap-2 text-xs text-slate-400">
+                  <span class="h-2 w-2 rounded-full bg-violet-400"></span>Dòng tiền
+                </div>
+                <div class="relative mx-auto flex h-24 w-24 items-center justify-center rounded-full" style="background: conic-gradient(#DF6B33 0deg 202deg, #8270D8 202deg 292deg, #343446 292deg 360deg)" aria-hidden="true">
+                  <div class="absolute inset-[9px] rounded-full bg-[#151622]"></div>
+                  <i data-lucide="wallet" class="relative h-6 w-6 text-slate-200" aria-hidden="true"></i>
+                </div>
+                <p class="text-center text-[10px] text-slate-500">Thu · Chi · Cân đối</p>
+              </div>
+            </div>
+
+            <div class="mt-3 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+              <div class="mb-4 flex items-center justify-between">
+                <p class="text-xs font-medium text-slate-300">Hồ sơ cần theo dõi</p>
+                <i data-lucide="ellipsis" class="h-4 w-4 text-slate-500" aria-hidden="true"></i>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-400/10 text-sky-300"><i data-lucide="file-check-2" class="h-4 w-4" aria-hidden="true"></i></span>
+                  <span class="flex-1 text-xs text-slate-400">Chứng từ kế toán</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  <span class="text-[10px] text-slate-500">Đã cập nhật</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-400/10 text-violet-300"><i data-lucide="calendar-check" class="h-4 w-4" aria-hidden="true"></i></span>
+                  <span class="flex-1 text-xs text-slate-400">Lịch kê khai thuế</span>
+                  <span class="h-1.5 w-1.5 rounded-full bg-amber-300"></span>
+                  <span class="text-[10px] text-slate-500">Đang theo dõi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-gently absolute -left-2 top-[22%] hidden items-center gap-3 rounded-2xl border border-white/10 bg-[#181927]/95 p-3.5 shadow-xl shadow-black/30 sm:flex">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300"><i data-lucide="shield-check" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span><span class="block text-xs font-semibold text-white">Sổ sách gọn gàng</span><span class="mt-1 block text-[10px] text-slate-500">Chủ động từng kỳ báo cáo</span></span>
+          </div>
+          <div class="float-gently absolute -right-2 bottom-[13%] hidden items-center gap-3 rounded-2xl border border-white/10 bg-[#181927]/95 p-3.5 shadow-xl shadow-black/30 sm:flex" style="animation-delay: -2.5s">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-ember/10 text-ember-light"><i data-lucide="receipt-text" class="h-5 w-5" aria-hidden="true"></i></span>
+            <span><span class="block text-xs font-semibold text-white">Báo cáo dễ hiểu</span><span class="mt-1 block text-[10px] text-slate-500">Nắm bắt nhanh tình hình</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="dich-vu" class="scroll-reveal mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+        <div class="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-ember-light">Dịch vụ của One2free</p>
+            <h2 class="max-w-2xl font-display text-3xl font-bold tracking-tight sm:text-4xl">Hậu phương tài chính<br class="hidden sm:block" /> cho hành trình kinh doanh.</h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-slate-400">Từ công việc sổ sách thường ngày đến báo cáo và tư vấn, chúng tôi giúp những con số trở nên hữu ích hơn cho doanh nghiệp.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="group rounded-2xl border border-white/[0.07] bg-panel/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-ember/25 hover:bg-panel">
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-ember/10 text-ember-light transition group-hover:scale-110"><i data-lucide="book-open-check" class="h-6 w-6" aria-hidden="true"></i></span>
+            <h3 class="font-display text-base font-semibold">Kế toán &amp; sổ sách</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Ghi nhận, sắp xếp và theo dõi chứng từ để dữ liệu kế toán luôn rõ ràng.</p>
+            <a href="#quy-trinh" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ember-light">Tìm hiểu thêm <i data-lucide="arrow-up-right" class="h-3.5 w-3.5" aria-hidden="true"></i></a>
+          </article>
+          <article class="group rounded-2xl border border-white/[0.07] bg-panel/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-ember/25 hover:bg-panel">
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-400/10 text-violet-300 transition group-hover:scale-110"><i data-lucide="file-chart-column-increasing" class="h-6 w-6" aria-hidden="true"></i></span>
+            <h3 class="font-display text-base font-semibold">Báo cáo tài chính</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Tổng hợp thông tin tài chính thành báo cáo mạch lạc, hỗ trợ bạn theo dõi hoạt động.</p>
+            <a href="#quy-trinh" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ember-light">Tìm hiểu thêm <i data-lucide="arrow-up-right" class="h-3.5 w-3.5" aria-hidden="true"></i></a>
+          </article>
+          <article class="group rounded-2xl border border-white/[0.07] bg-panel/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-ember/25 hover:bg-panel">
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 transition group-hover:scale-110"><i data-lucide="landmark" class="h-6 w-6" aria-hidden="true"></i></span>
+            <h3 class="font-display text-base font-semibold">Kê khai &amp; tư vấn thuế</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Hỗ trợ theo dõi lịch kê khai và giải đáp các vấn đề thuế theo nhu cầu doanh nghiệp.</p>
+            <a href="#quy-trinh" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ember-light">Tìm hiểu thêm <i data-lucide="arrow-up-right" class="h-3.5 w-3.5" aria-hidden="true"></i></a>
+          </article>
+          <article class="group rounded-2xl border border-white/[0.07] bg-panel/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-ember/25 hover:bg-panel">
+            <span class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 transition group-hover:scale-110"><i data-lucide="briefcase-business" class="h-6 w-6" aria-hidden="true"></i></span>
+            <h3 class="font-display text-base font-semibold">Tư vấn vận hành</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Cùng bạn nhìn lại dòng tiền, quy trình và thông tin cần thiết cho kế hoạch kinh doanh.</p>
+            <a href="#quy-trinh" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ember-light">Tìm hiểu thêm <i data-lucide="arrow-up-right" class="h-3.5 w-3.5" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="ve-chung-toi" class="scroll-reveal border-y border-white/[0.06] bg-white/[0.018]">
+        <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-2 lg:items-center">
+          <div class="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-[#11121F] p-7 sm:p-10">
+            <div aria-hidden="true" class="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/[0.09] blur-3xl"></div>
+            <div class="relative">
+              <p class="mb-8 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Từ con số đến góc nhìn</p>
+              <div class="space-y-5">
+                <div class="flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ember/10 text-ember-light"><i data-lucide="file-text" class="h-5 w-5" aria-hidden="true"></i></span>
+                  <div class="flex-1"><p class="text-sm font-semibold">Dữ liệu được sắp xếp</p><p class="mt-1 text-xs text-slate-500">Chứng từ và sổ sách có hệ thống</p></div>
+                  <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-400" aria-hidden="true"></i>
+                </div>
+                <div class="ml-5 h-5 border-l border-dashed border-white/15"></div>
+                <div class="flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-4 sm:ml-8">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-400/10 text-violet-300"><i data-lucide="chart-pie" class="h-5 w-5" aria-hidden="true"></i></span>
+                  <div class="flex-1"><p class="text-sm font-semibold">Báo cáo dễ nắm bắt</p><p class="mt-1 text-xs text-slate-500">Thông tin trọng tâm, trình bày rõ ràng</p></div>
+                  <i data-lucide="arrow-right" class="h-4 w-4 text-slate-600" aria-hidden="true"></i>
+                </div>
+                <div class="ml-5 h-5 border-l border-dashed border-white/15 sm:ml-13"></div>
+                <div class="flex items-center gap-4 rounded-2xl border border-ember/15 bg-ember/[0.055] p-4 sm:ml-16">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ember/15 text-ember-light"><i data-lucide="lightbulb" class="h-5 w-5" aria-hidden="true"></i></span>
+                  <div class="flex-1"><p class="text-sm font-semibold">Quyết định tự tin hơn</p><p class="mt-1 text-xs text-slate-400">Có cơ sở để chủ động bước tiếp</p></div>
+                  <i data-lucide="sparkles" class="h-4 w-4 text-ember-light" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-ember-light">Về One2free</p>
+            <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">Kế toán không chỉ là những con số.</h2>
+            <p class="mt-5 text-sm leading-7 text-slate-400 sm:text-base">
+              Chúng tôi tin rằng thông tin tài chính tốt cần vừa chính xác, vừa dễ hiểu. One2free hướng đến việc giúp doanh nghiệp nhìn rõ tình hình, hiểu điều đang diễn ra và có thêm cơ sở cho những quyết định tiếp theo.
+            </p>
+            <div class="mt-8 space-y-4">
+              <div class="flex gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ember/10 text-ember-light"><i data-lucide="check" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                <p class="text-sm leading-6 text-slate-300"><strong class="font-semibold text-white">Rõ ràng:</strong> trao đổi dễ hiểu, thông tin minh bạch.</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ember/10 text-ember-light"><i data-lucide="check" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                <p class="text-sm leading-6 text-slate-300"><strong class="font-semibold text-white">Chủ động:</strong> chú trọng thời hạn, quy trình và kế hoạch.</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ember/10 text-ember-light"><i data-lucide="check" class="h-3.5 w-3.5" aria-hidden="true"></i></span>
+                <p class="text-sm leading-6 text-slate-300"><strong class="font-semibold text-white">Đồng hành:</strong> giải pháp được trao đổi theo nhu cầu thực tế.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quy-trinh" class="scroll-reveal mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-ember-light">Bắt đầu đơn giản</p>
+          <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">Một quy trình, luôn rõ ràng.</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-400">Từng bước được trao đổi minh bạch để dịch vụ phù hợp với hoạt động của doanh nghiệp bạn.</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-3">
+          <article class="relative rounded-2xl border border-white/[0.07] bg-panel/75 p-6 sm:p-7">
+            <span class="font-display text-4xl font-bold text-ember/35">01</span>
+            <h3 class="mt-5 font-display text-lg font-semibold">Lắng nghe nhu cầu</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Tìm hiểu quy mô, cách vận hành và những vấn đề kế toán doanh nghiệp đang cần giải quyết.</p>
+            <i data-lucide="messages-square" class="absolute right-6 top-7 h-5 w-5 text-slate-600" aria-hidden="true"></i>
+          </article>
+          <article class="relative rounded-2xl border border-white/[0.07] bg-panel/75 p-6 sm:p-7">
+            <span class="font-display text-4xl font-bold text-ember/35">02</span>
+            <h3 class="mt-5 font-display text-lg font-semibold">Thống nhất giải pháp</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Cùng xác định phạm vi công việc, hồ sơ cần chuẩn bị và cách phối hợp phù hợp.</p>
+            <i data-lucide="list-checks" class="absolute right-6 top-7 h-5 w-5 text-slate-600" aria-hidden="true"></i>
+          </article>
+          <article class="relative rounded-2xl border border-white/[0.07] bg-panel/75 p-6 sm:p-7">
+            <span class="font-display text-4xl font-bold text-ember/35">03</span>
+            <h3 class="mt-5 font-display text-lg font-semibold">Theo dõi &amp; đồng hành</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-400">Cập nhật công việc theo thỏa thuận và trao đổi các thông tin cần thiết trong quá trình thực hiện.</p>
+            <i data-lucide="handshake" class="absolute right-6 top-7 h-5 w-5 text-slate-600" aria-hidden="true"></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="scroll-reveal mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-24">
+        <div class="relative overflow-hidden rounded-3xl border border-ember/20 bg-[#15131D] px-6 py-12 text-center sm:px-12 sm:py-16">
+          <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(223,107,51,0.2),transparent_60%)]"></div>
+          <div class="relative mx-auto max-w-2xl">
+            <span class="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-ember/20 bg-ember/10 text-ember-light"><i data-lucide="sparkles" class="h-6 w-6" aria-hidden="true"></i></span>
+            <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">Sẵn sàng làm rõ bức tranh tài chính?</h2>
+            <p class="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-400">Khám phá các dịch vụ của One2free và tìm hướng hỗ trợ phù hợp với doanh nghiệp của bạn.</p>
+            <a href="#dich-vu" class="group mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-ember px-5 text-sm font-semibold text-white shadow-lg shadow-ember/20 transition hover:-translate-y-0.5 hover:bg-ember-light focus:outline-none focus:ring-4 focus:ring-ember/25">
+              Xem dịch vụ kế toán
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-white/[0.07]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-7 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <a href="index.html" class="flex w-fit items-center gap-2 font-display text-sm font-semibold text-slate-300">
+          <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-ember/15 text-ember-light"><i data-lucide="layers-3" class="h-4 w-4" aria-hidden="true"></i></span>
+          One2free
+        </a>
+        <p>Đồng hành cùng doanh nghiệp trên hành trình quản lý tài chính.</p>
+        <div class="flex items-center gap-5">
+          <a href="#dich-vu" class="transition hover:text-white">Dịch vụ</a>
+          <a href="login.html" class="transition hover:text-white">Đăng nhập</a>
+          <span>© 2026 One2free</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+
+      const revealItems = document.querySelectorAll(".scroll-reveal");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if ("IntersectionObserver" in window && !prefersReducedMotion) {
+        document.body.classList.add("motion-ready");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-revealed", "animate__animated", "animate__fadeInUp");
+                entry.target.addEventListener(
+                  "animationend",
+                  () => entry.target.classList.remove("animate__animated", "animate__fadeInUp"),
+                  { once: true },
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+    </script>
+  </body>
+</html>
